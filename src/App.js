@@ -1,0 +1,59 @@
+import React from "react";
+import MyNode from "./my-node";
+import OrganizationChart from "@dabeng/react-orgchart";
+import './App.css';
+
+const CustomNodeChart = () => {
+    const ds = {
+        id: "n1",
+        name: "Lao Lao",
+        title: "general manager director",
+        arrow: "hide-arrow",
+        children: [
+            { id: "n2", name: "Bo Miao", title: "department manager", arrow: "hide-arrow", },
+            {
+                id: "n3",
+                name: "Su Miao",
+                title: "department manager",
+                arrow: "hide-arrow",
+                children: [
+                    { id: "n4", name: "Tie Hua", title: "senior engineer" },
+                    {
+                        id: "n5",
+                        name: "Hei Hei",
+                        title: "senior engineer",
+                        children: [
+                            { id: "n6", name: "Dan Dan", title: "engineer" },
+                            { id: "n7", name: "Xiang Xiang", title: "engineer" }
+                        ]
+                    },
+                    { id: "n8", name: "Pang Pang", title: "senior engineer" }
+                ]
+            },
+            { id: "n9", name: "Hong Miao", title: "department manager", arrow: "hide-arrow", },
+            {
+                id: "n10",
+                name: "Chun Miao",
+                title: "department manager",
+                arrow: "hide-arrow",
+                children: [
+                    { id: "n11", name: "Yue Yue", title: "senior engineer" },
+                    { id: "n12", name: "German Gonzalez", title: "senior engineer" },
+
+
+                    ]
+            }
+        ],
+
+    };
+
+    return (
+        <OrganizationChart
+            datasource={ds}
+            chartClass="myChart"
+            NodeTemplate={MyNode}
+        />
+    );
+};
+
+export default CustomNodeChart;
