@@ -6,9 +6,14 @@
     border-top-color: #215a88;
 }
 
-.orgchart.myChart > ul > li > ul li .oc-node::before,
+/*.orgchart.myChart > ul > li > ul li .oc-node::before {*/
+/*    !*background-color: #215a88;*!*/
+/*    background-color: orange;*/
+/*}*/
+
 .orgchart.myChart ul li .oc-node:not(:only-child)::after {
-    background-color: #215a88;
+    /*background-color: #215a88;*/
+    background-color: blue;
 }
 
 .orgchart.myChart {
@@ -35,4 +40,10 @@
     height: 65px;
     padding: 2px;
     border: 1px solid #215a88;
+}
+
+
+/* hide children elements*/
+.orgchart-container .children-hidden {
+    display: none!important;
 }
